@@ -1,5 +1,4 @@
 using RareCrewC_Project.Services;
-using RareCrewC_Project.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
 builder.Services.AddTransient<EmployeeService>();
+
+builder.Services.AddTransient<PieChartService>();
 
 
 var app = builder.Build();
